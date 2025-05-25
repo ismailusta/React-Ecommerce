@@ -1,25 +1,16 @@
-import { useEffect, useState } from "react";
-import ProductList from "./ProductList.tsx";
-import { IProduct } from "./model/IProduct";
-import Header from "./Header";
+import Header from "./components/Header";
 import { Container, CssBaseline } from "@mui/material";
+import { Outlet } from "react-router";
 
 function App() {
-  const [products, setProducts] = useState<IProduct[]>([]);
 
-  useEffect(() => {
-    fetch("http://localhost:5166/api/products")
-    .then(response => response.json())
-    .then(data => setProducts(data));
-  }, []);
-  
   
   return (
     <>
      <CssBaseline />
      <Header />
      <Container>
-        <ProductList products={products} />
+        <Outlet />
      </Container>
     </>
   )
