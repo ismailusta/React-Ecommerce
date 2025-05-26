@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
 using API.Data;
+using API.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,6 +19,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+app.UseMiddleware<ErrorHandling>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
