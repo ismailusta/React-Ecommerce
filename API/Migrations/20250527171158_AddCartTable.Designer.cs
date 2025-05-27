@@ -2,6 +2,7 @@
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250527171158_AddCartTable")]
+    partial class AddCartTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
@@ -154,6 +157,16 @@ namespace API.Migrations
                             Name = "Product 7",
                             Price = 70.99m,
                             Stock = 15
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "Description for Product 8",
+                            ImageUrl = "8.jpg",
+                            IsActive = true,
+                            Name = "Product 8",
+                            Price = 80.99m,
+                            Stock = 20
                         });
                 });
 

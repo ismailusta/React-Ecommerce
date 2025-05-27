@@ -10,6 +10,7 @@ namespace API.Data
 
         }
         public DbSet<Product> Products => Set<Product>();
+        public DbSet<Cart> Carts => Set<Cart>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -53,6 +54,36 @@ namespace API.Data
                     IsActive = true,
                     Price = 40.99m,
                     Stock = 25
+                },
+                new Product
+                {
+                    Id = 5,
+                    Name = "Product 5",
+                    Description = "Description for Product 5",
+                    ImageUrl = "5.jpg",
+                    IsActive = true,
+                    Price = 50.99m,
+                    Stock = 10
+                },
+                new Product
+                {
+                    Id = 6,
+                    Name = "Product 6",
+                    Description = "Description for Product 6",
+                    ImageUrl = "6.jpg",
+                    IsActive = true,
+                    Price = 60.99m,
+                    Stock = 5
+                },
+                new Product
+                {
+                    Id = 7,
+                    Name = "Product 7",
+                    Description = "Description for Product 7",
+                    ImageUrl = "7.jpg",
+                    IsActive = true,
+                    Price = 70.99m,
+                    Stock = 15
                 }
             );
         }
