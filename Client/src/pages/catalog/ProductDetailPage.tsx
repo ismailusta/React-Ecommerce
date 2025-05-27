@@ -10,7 +10,7 @@ export default function ProductDetailPage() {
     useEffect(()=> {
         requests.Catalog.details(Number(id))
         .then(data => setProduct(data))
-        .catch(error => console.error("Error fetching product:", error))
+        .catch(error => console.error("Error fetchingx product:", error))
         .finally(() => setLoading(false));
     },[id])
     if (loading) {

@@ -6,6 +6,7 @@ const links = [
   {title: 'Catalog', to: '/catalog'},
   {title: 'About', to: '/about'},
   {title: 'Contact', to: '/contact'},
+  {title: 'Error', to: '/error'},
 ]
 const navLinkStyles = [
   { textDecoration: 'none', color: 'inherit', '&:hover': {color: "text.primary"}, '&.active': {color: "warning.main"} },
